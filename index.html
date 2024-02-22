@@ -34,6 +34,95 @@
     font-size: 30px;
   }
 
+/* Default styles */
+.changecol {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .changecol > .changecol {
+      width: 90%;
+      padding-top: 3em;
+      justify-content: space-between;
+    }
+
+    .changerow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .heading{
+      display: none;
+    }
+
+    .row1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col1 {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+/* Media query for responsiveness */
+
+  
+
+
+    
+
+    /* Media query for smartphones */
+    @media only screen and (max-width: 768px) {
+      .changecol {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .changecol > .changecol {
+        width: 100%;
+        padding-top: 1em;
+        flex-direction: column;
+      }
+
+      .changerow {
+        margin-bottom: 2em; /* Add margin between rows */
+      }
+      
+      /* Add border and padding to create separation */
+      .changerow {
+        border: 2px solid #ccc;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      
+      /* Heading style */
+      .heading {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 3em;
+        display: block;
+      }
+
+      .he-50{
+      height: 30vh;
+    }
+
+    .col1 {
+    flex: 100%;
+  }
+    }
+
+
 </style>
 
 <body>
@@ -57,7 +146,7 @@
             <ul class="navbar-nav mx-auto flex-grow-1 d-flex justify-content-evenly align-items-center">
               <!-- Navbar Items -->
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="abouttheconference.html">About the Conference</a>
@@ -137,7 +226,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center" style="font-weight: 600;">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="color: #f30808; height: 50vh;">
+            <div class="d-flex flex-column justify-content-center align-items-center he-50" style="color: #f30808; height: 50vh;">
               <div class="text-center ">
                 <p class="font-size">WELCOME TO </p>
               </div>
@@ -158,14 +247,14 @@
       </div>
 
 
-      <div class="changecol" style="display: flex; flex-direction: row; justify-content: center">
-        
-        <div class="changecol " style="display: flex; flex-direction: row; justify-content: space-between; width: 90%; padding-top: 3em; @media (max-width: 768px) {}" >
-          <div class="changerow" ><img class="img-fluid" src="images/LOGOCUP.png" alt="SRMS" style="display: flex ; flex-direction: column; height: 150px; width: 172px;  "></div>
-          <div class="changerow " ><img class="img-fluid" src="images/logo.png" alt="SRMS" style="display: flex ; flex-direction: column; height: 83px; width: 172px;"></div>
-          <div class=" changerow" ><img class="img-fluid" src="images/LOGOPUP.png" alt="SRMS" style=" display: flex ; flex-direction: column; height: 150px; width: 172px;"></div>
-          <div class=" changerow" ><img class="img-fluid" src="images/clarivate-web-of-science.png" alt="SRMS" style="display: flex ; flex-direction: column; height: 83px; width: 200px; "></div>
-          <div class=" changerow" ><img class="img-fluid" src="images/elsevier-scopus.png" alt="SRMS" style=" display: flex ; flex-direction: column; height: 150px; width: 200px;  "></div>
+      <div class="changecol">
+        <div class="changecol">
+          <div class="heading" style="font-size: 2rem;">ORGANIZING INSTITUTES</div>
+          <div class="changerow"><img class="img-fluid" src="images/LOGOCUP.png" alt="SRMS" style="height: 150px; width: 172px;"></div>
+          <div class="changerow"><img class="img-fluid" src="images/logo.png" alt="SRMS" style="height: 83px; width: 172px;"></div>
+          <div class="changerow"><img class="img-fluid" src="images/LOGOPUP.png" alt="SRMS" style="height: 150px; width: 172px;"></div>
+          <div class="changerow"><img class="img-fluid" height="120px" src="images/clarivate-web-of-science.png" alt="SRMS" style="height: 100px; width: 200px;"></div>
+          <div class="changerow"><img class="img-fluid" src="images/elsevier-scopus.png" alt="SRMS" style="height: 150px; width: 200px;"></div>
         </div>
       </div>
 
@@ -309,14 +398,18 @@
       <h2>
         IMPORTANT DATES
       </h2>
-      <div class="row">
-        <div class="col"><b>Online registration starts from:</b><br>10th February, 2024</div>
-        <div class="col"><b>Abstract submission Deadline </b><br>5th April, 2024</div>
-        <div class="col"><b>Paper submission deadline:</b><br>30th June, 2024</div>
-        <div class="col"><b>Registration deadline:</b><br>30th July, 2024</div>
-        <div class="col"><b>Paper Acceptance For Presentation Deadline </b><br>20th July, 2024</div>
-
-
+      &nbsp;
+     
+      <div class="container">
+        <div class="row1">
+          <div class="col1"><b>Online registration starts from:</b><br>10th February, 2024</div>
+          <div class="col1"><b>Abstract submission Deadline </b><br>5th April, 2024</div>
+          <div class="col1"><b>Paper submission deadline:</b><br>30th June, 2024</div>
+          <div class="col1"><b>Registration deadline:</b><br>30th July, 2024</div>
+          <div class="col1"><b>Paper Acceptance For Presentation Deadline </b><br>20th July, 2024</div>
+  
+  
+        </div>
       </div>
 
       <br><BR>
@@ -326,6 +419,7 @@
           <h2>
             Objective
           </h2>
+          &nbsp;
           <p align="justify">
             The main objective of this conference is to provide a forum for researchers, academicians, leading
             scientists and industries to interact with each other, to exchange new ideas, to discuss
@@ -545,7 +639,10 @@
         }
       }
     });
+
+    
   </script>
+  
   <!-- end owl carousel script -->
 
 </body>

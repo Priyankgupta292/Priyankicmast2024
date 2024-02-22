@@ -27,6 +27,25 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .row1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col1 {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .col1 {
+    flex: 100%;
+  }
+}
+  </style>
 </head>
 
 <body>
@@ -111,14 +130,19 @@
       <h2>
         IMPORTANT DATES
     </h2>
-    <div class="row">
-      <div class="col"><b>Online registration starts from:</b><br>10th February, 2024</div>
-      <div class="col"><b>Abstract submission Deadline </b><br>5th April, 2024</div>
-      <div class="col"><b>Paper submission deadline:</b><br>30th June, 2024</div>
-      <div class="col"><b>Registration deadline:</b><br>30th July, 2024</div>
-      <div class="col"><b>Paper Acceptance For Presentation Deadline </b><br>20th July, 2024</div>
-      
+    &nbsp;
+    &nbsp;
+    <div class="row1 container">
+      <div class="col1"><b>Online registration starts from:</b><br>10th February, 2024</div>
+      <div class="col1"><b>Abstract submission Deadline </b><br>5th April, 2024</div>
+      <div class="col1"><b>Paper submission deadline:</b><br>30th June, 2024</div>
+      <div class="col1"><b>Registration deadline:</b><br>30th July, 2024</div>
+      <div class="col1"><b>Paper Acceptance For Presentation Deadline </b><br>20th July, 2024</div>
+
+
     </div>
+    
+    
 
 
     <br><br>
